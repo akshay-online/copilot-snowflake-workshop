@@ -21,7 +21,7 @@ not a deployed service or a Microsoft Foundry agent.
 ```text
 Create .github/agents/snowflake-builder.agent.md.
 Use YAML frontmatter name: snowflake-builder, a quoted description for building one
-Snowflake entity from its spec using the team's kit, and tools: ['search', 'edit', 'todos'].
+Snowflake entity from its spec using the team's kit, and tools: ['read', 'search', 'edit', 'todos'].
 If these tool names differ in this VS Code version, report what needs configuration;
 do not silently grant terminal, database, network or deployment tools.
 Role: Snowflake data engineer, never inventing business rules or source columns.
@@ -44,7 +44,7 @@ Create only this custom-agent file now; no application edits.
 - [ ] One .agent.md file with valid YAML, a discoverable name and working relative links.
 - [ ] Gather and Plan both require human approval; missing specs block generation.
 - [ ] Both skills are referenced in the correct order, with a final self-review.
-- [ ] Tools allow only the intended local work; no terminal/database tool was added automatically.
+- [ ] Tools are read, search, edit and todos only; no execute, terminal, web or database tool was added.
 - [ ] The handoff distinguishes reviewed code from executed/validated code.
 
 Tool restrictions reduce what the agent can do; text instructions alone are not a security boundary.

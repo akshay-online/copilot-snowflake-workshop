@@ -16,7 +16,7 @@ it is not a local Snowflake emulator.
 2. Send the prompt with your repaired procedure attached.
 3. Review the generated test file for independent setup and meaningful assertions.
 4. Code-only route: record the checklist as reviewed and execution as NOT RUN.
-5. Live route: follow [optional setup and pytest execution](../../README.md) first,
+5. Live route: follow [optional setup and pytest execution](../../README.md#optional-pytest-execution) first,
    then run the generated test file. Redeploy the repaired procedure before testing; the fixture clones deployed objects.
 
 ## Prompt

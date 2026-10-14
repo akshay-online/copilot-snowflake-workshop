@@ -12,7 +12,7 @@ You may complete the code-only route without credentials and clearly mark runtim
 ## Steps
 
 1. Send the review prompt below and check its table against the requirements. This is the code-only route.
-2. Optional live route: follow [sandbox setup](../../README.md) in a **fresh, empty** allocated database.
+2. Optional live route: follow [sandbox setup](../../README.md#optional-snowflake-setup) in a **fresh, empty** allocated database.
    Deploy the reviewed table files and all three reviewed procedures. Do not use the original broken starter.
 3. Choose file mode or DML mode, not both. File mode uploads the two CSVs through
    [upload script](../../setup/02_upload_files.sql) or Snowsight.
