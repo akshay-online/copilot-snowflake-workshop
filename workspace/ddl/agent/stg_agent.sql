@@ -1,0 +1,3 @@
+-- OBJECT: STAGING.STG_AGENT
+-- PURPOSE: Exercise 01 starter; complete the six-column DDL from the AGENT spec
+-- RUN: After setup/01_bootstrap.sql and after reviewing the generated DDL; LAB-101

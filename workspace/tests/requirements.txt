@@ -1,0 +1,2 @@
+pytest>=8,<10
+snowflake-connector-python>=3,<5

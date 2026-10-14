@@ -1,0 +1,19 @@
+-- OBJECT: PROCESSING.PRC_AGENT
+-- PURPOSE: Retain current-agent snapshots by valuation month; LAB-101
+-- RUN: After setup/01_bootstrap.sql in your sandbox; masking requires supported Snowflake edition
+CREATE TABLE IF NOT EXISTS PROCESSING.PRC_AGENT (
+    AGENT_ID VARCHAR(12) NOT NULL COMMENT 'Unique synthetic agent identifier',
+    AGENT_NAME VARCHAR(80) NOT NULL COMMENT 'Synthetic agent display name',
+    AGENT_EMAIL VARCHAR(120) COMMENT 'Synthetic contact email',
+    AGENT_STATUS VARCHAR(12) NOT NULL COMMENT 'ACTIVE or INACTIVE',
+    COMMISSION_RATE NUMBER(7,4) NOT NULL COMMENT 'Commission fraction between zero and one',
+    HIRE_DATE DATE NOT NULL COMMENT 'Agent hire date',
+    VALUATION_DATE DATE NOT NULL COMMENT 'Month-end snapshot date',
+    LAST_UPDATE_USER VARCHAR(100) NOT NULL COMMENT 'User who loaded the snapshot',
+    LAST_UPDATE_DATE TIMESTAMP_NTZ NOT NULL COMMENT 'Snapshot load timestamp'
+) COMMENT = 'Synthetic AGENT monthly snapshots';
+
+ALTER TABLE PROCESSING.PRC_AGENT MODIFY COLUMN AGENT_NAME
+    SET MASKING POLICY PROCESSING.MP_MASK_STRING FORCE;
+ALTER TABLE PROCESSING.PRC_AGENT MODIFY COLUMN AGENT_EMAIL
+    SET MASKING POLICY PROCESSING.MP_MASK_STRING FORCE;

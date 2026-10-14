@@ -1,0 +1,7 @@
+COLUMN_ORDER,COLUMN_NAME,DATA_TYPE,NULLABLE,BUSINESS_KEY,SENSITIVE,DESCRIPTION
+1,AGENT_ID,VARCHAR(12),N,Y,N,Unique synthetic agent identifier
+2,AGENT_NAME,VARCHAR(80),N,N,Y,Synthetic agent display name
+3,AGENT_EMAIL,VARCHAR(120),Y,N,Y,Synthetic contact email
+4,AGENT_STATUS,VARCHAR(12),N,N,N,ACTIVE or INACTIVE
+5,COMMISSION_RATE,"NUMBER(7,4)",N,N,N,Commission fraction between zero and one
+6,HIRE_DATE,DATE,N,N,N,Agent hire date
