@@ -85,6 +85,7 @@ Ask the workshop administrator to provision these permissions; do not change org
 1. Finish exercises 01-03 before attempting their generated SQL. Review every change.
 2. In [setup/01_bootstrap.sql](setup/01_bootstrap.sql), replace COPILOT_LAB_YOURNAME with your allocated name.
    Set your authorized role and warehouse in the Snowflake extension or Snowsight, then run that script.
+   Use a fresh sandbox: existing tables are kept, so an older ETL.LOAD_AUDIT lacks the ordered AUDIT_ID.
 3. Run the three reviewed files in [ddl/agent](ddl/agent/): staging, history, processing, in that order.
 4. Deploy the history reference and your **repaired** processing procedure from [procs/agent](procs/agent/).
    Generated SQL does not deploy automatically; execute the reviewed CREATE PROCEDURE statements yourself.
